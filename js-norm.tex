@@ -1,0 +1,239 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Jonathan D. Schipp}}
+
+606 S. Foxtrot Ct.\ \ \textbullet
+\ \ Huntingburg, IN 47542
+\\
+(812) 309-1989\ \ \textbullet
+\ \ jonschipp@gmail.com
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+	{\textbf{National Center for Supercomputing Applications}}
+	{\textbf{University of Illinois Champaign-Urbana}}
+
+	\headerrow
+		{\emph{Security Engineer, CyberSecurity Directorate}}
+		{\emph{July 2013 -- Current}}
+	\begin{itemize*}
+		\item Team is responsible for defending one of the world's fastest supercomputers, Blue Waters
+		\item Design, implement, and configure security controls and solutions in a highly-secure research environment
+		\item Administration of one of the largest Bro network monitoring platform deployments
+		\item Intrusion detection, network flow analysis, and incident response
+	\end{itemize*}
+	
+	\item
+	\headerrow
+		{\textbf{Touch of Class, Parke-Bell LTD, Inc.}}
+		{\textbf{Huntingburg, IN}}
+	\\
+	\headerrow
+		{\emph{Unix System Administrator and Security Specialist}}
+		{\emph{June 2011 -- July 2013}}
+	\begin{itemize*}
+		\item Manage and configure computer networks and computer network systems for four locations
+		\item Design, implement, and automate solutions to increase business productivity
+		\item Maintain telephony software and hardware for a call center utilizing VoIP technologies
+		\item Monitor networks for problems, intrusions, incidents, and other anomalous activities
+		\item Coordinate the storage of events and logs, and ensure the integrity of system records
+		\item Pursue compliance with PCI's Data Security Standard and follow common industry practices in effort to protect company assets
+		\item Perform and review vulnerability assessments and internal penetration tests
+		\item Policy writing and technical documentation of modifications, configurations, and tasks
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Mitchell International}}
+		{\textbf{Evansville, IN}}
+	\\
+	\headerrow
+		{\emph{Technical Support Specialist}}
+		{\emph{March 2011 -- June 2011}}
+	\begin{itemize*}
+		\item Aid customers in resolving software issues by phone and with remote assistance
+		\item Troubleshoot and configure different software in various network environments
+		\item Communicate, coordinate. and diagnose problems with members of our team
+		\item Document dialogues, procedures, and solutions with and for the customer
+	\end{itemize*}
+
+\end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item 
+	\headerrow
+		{\textbf{ITT Technical Institute}}
+		{\textbf{Newburgh, IN}}
+	\\
+	\headerrow
+		{\emph{Computer Network Systems and Information Security, B.S. Applied Science}}
+		{\emph{2007 -- 2011}}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Skills}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item Working knowledge of FreeBSD, OpenBSD, OSX, Linux (Red Hat, Ubuntu), Windows, Cisco IOS
+	\item Understanding and experience with firewall and packet filtering software such as iptables, PF, IPFW, OSX ALF, Sonicwall, Windows Advanced Firewall, Windows 2000 IP Security Policies
+	\item Detailed knowledge of the TCP/IPv4 packet structure and network traffic
+	\item Experienced in network and host based intrusion detection systems including signature and behavioral based detection engines such as Snort, BRO-IDS, OSSEC, and Sonicwall
+	\item Proficient with packet capture and network traffic analysis tools like Tcpdump, Wireshark, ARGUS, iftop, Ntop, passivedns, httpry, arpwatch, TCPick, TCPFlow, Netsniff-ng etc.
+	\item Experience in the automation of administrative tasks on unix-like systems with Bash and Korn shell programming. Additional experience with Awk, \LaTeX, and Expect. Very comfortable with command-line interfaces.
+	\item Working knowledge of Metasploit, Nessus, Nmap, hping3, John the Ripper, Hashcat, Aircrack-ng and other popular open source security testing software and utilities
+\end{itemize}
+
+\newpage
+
+
+\begin{center}
+{\LARGE \textbf{Jonathan D. Schipp}}
+
+606 S. Foxtrot Ct.\ \ \textbullet
+\ \ Huntingburg, IN 47542
+\\
+(812) 309-1989\ \ \textbullet
+\ \ jonschipp@gmail.com
+\end{center}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Certifications}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item \textsc{COMPTIA A+}
+	\item \textsc{COMPTIA Network+}
+	\item \textsc{COMPTIA Linux+}
+	\item \textsc{COMPTIA Security+}
+	\item \textsc{Wireshark Certified Network Analyst}
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Additional Training \& Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item Over 300 hours of specialized information security and technology based workshops and conferences
+	\item Attended the HFC Metasploit Framework workshop in Cincinnati and in Louisville
+	\item iOS Development Course, \textit{Vincinnes University}
+	\item SecurityTube.net's Wireless LAN Security and Penetration Testing Megaprimer
+	\item CourseEra - Information Security and Risk Management in Context, \textit{University of Washington}
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Presentation Experience}
+
+\begin{itemize}
+	\parskip=0.1em
+	\item \textsc{2013} "A Look at the Netsniff-NG Toolkit" \textit{Midwest Open Source Software Conference, University of Louisville}
+	\item \textsc{2013} "Hacker Hotshots" Interviewed by \textit{ConsciseCourses.com}
+	\item \textsc{2012} "A PCAP Workshop" \textit{Hack3rcon 3}
+	\item \textsc{2012} "An Introduction to Traffic Analysis" \textit{AIDE Conference, Marshall University}
+	\item \textsc{2011} "FOSS for Unix Administrators" \textit{Vincennes University}
+	\item \textsc{2011} "Implementing a Network Monitoring System" \textit{Hack3rcon 2}
+	
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Honors \& Awards}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item \textsc{2011} Employee of the Month
+	\item \textsc{2010} Hack3rcon – Capture the Flag winner – Black Badge recipient
+	\item \textsc{2009} ITT Tech – Academic Honors
+	\item \textsc{2007} ITT Tech – Academic Honors 
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Community Contributions}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item \textsc{Founder} -- Dubois County Linux User Group – \textit{Operating system discussion group}
+	\item \textsc{Founder} -- Southern Indiana Computer Klub – \textit{Security research group}
+	\item \textsc{Contributor} -- NetSniff-NG toolkit – \textit{Suite of high performance networking tools}
+	\item \textsc{Implementor} -- Free downtown Wifi, \textit{City of Huntingburg}
+	\item \textsc{Author} -- HC3 presentation material used at Princess Sumaya University for Technology (PSUT)
+	\item \textsc{Author} -- 50+ online articles covering network security monitoring and system administration
+	\item \textsc{Author} -- mal-dnssearch, a malware host detection and prevention script that handles multiple logs
+	\item \textsc{Member} -- USENIX, ISSA Kentuckiana Chapter, Infragard, and Appalachian Institute of Digital Evidence
+
+\end{itemize}
+
+\let\thefootnote\relax\footnote{See http://jonschipp.com for further information and detail including sources and references}
+
+\end{document}
