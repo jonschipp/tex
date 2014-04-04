@@ -1,4 +1,3 @@
-tex
-===
+# tex
 
 My LaTeX Documents
