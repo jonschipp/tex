@@ -1,0 +1,125 @@
+\ProvidesPackage{beamerthemebro}[2011/11/04 v0.1 LaTeX beamer theme for Bro]
+
+\usepackage{hyperref}
+\usepackage{listings}
+
+%
+% Corporate Identity (definitions of colors, fonts, logos)
+%
+
+\usetheme{mavam}
+
+\definecolor{bro-red}{HTML}{C24444}
+\definecolor{bro-blue}{HTML}{2A85A7}
+\colorlet{bro-green}{green!60!black}
+
+\pgfdeclareimage[width=.12\textwidth]{icsi-logo}{figs/icsi-logo}
+\pgfdeclareimage[width=.17\textwidth]{ncsa-logo}{figs/ncsa-logo-vertical}
+\pgfdeclareimage[width=.2\textwidth]{bro-eye-small}{figs/bro-logo-small}
+\pgfdeclareimage[width=.4\textwidth]{bro-eye-large}{figs/bro-logo-small}
+\pgfdeclareimage[width=.3\textwidth]{bro-logo-large}{figs/bro-logo-large}
+
+%
+% External package configuration
+%
+
+\hypersetup{
+    breaklinks=true,        % break URLs at the end of line
+    colorlinks=true,        % false: boxed links; true: colored links
+    linkcolor=bro-blue,         % color of internal links
+    citecolor=bro-blue,         % color of links to bibliography
+    filecolor=bro-blue,         % color of file links
+    urlcolor=bro-blue           % color of external links
+}
+
+% Bro syntax highlighting
+\lstset{
+  language=C,
+  tabsize=4,
+  basicstyle=\footnotesize\ttfamily,
+  columns=flexible,
+  extendedchars=true,
+  breaklines=true,
+  prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+  showtabs=false,
+  showspaces=false,
+  showstringspaces=false,
+  keywordstyle={\color[rgb]{0,0,1}},
+  commentstyle={\color[rgb]{0.133,0.545,0.133}},
+  stringstyle={\color[rgb]{0.627,0.126,0.941}},
+  % Bro language customization.
+  morecomment=[l]{\#},
+  morekeywords={add,event,type,global,local,in,
+  count,addr,port,string,time,interval,set,table,record,
+  create_expire,read_expire, write_expire,
+  module,export,NOTICE}
+}
+
+%
+% Inner theming
+%
+\setbeamercolor{alerted text}{fg=bro-red}
+\setbeamercolor{item}{fg=bro-blue}
+\setbeamercolor{section in toc}{fg=bro-blue}
+
+%
+% Footer
+%
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]
+    {author in head/foot}%
+%    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]
+    {title in head/foot}%
+    \usebeamerfont{section in head/foot}\insertsubtitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]
+    {date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+%
+% Title page
+%
+\addtobeamertemplate{title page}{%
+  \vspace{5pt}
+  \begin{center}
+    {% FIXME. Hackish way to use Palatino font.
+    \renewcommand*\sfdefault{ppl}\normalfont\upshape\LARGE
+    The Bro Network Security Monitor}
+    \vspace{10pt}
+    \begin{pgfpicture}
+    \pgftext[at=\pgfpoint{1pt}{1pt},center,bottom]{%
+      \pgfuseimage{bro-logo-large}}
+    \end{pgfpicture}%
+  \end{center}
+  \vspace{-20pt}
+  \pgftext[at=\pgfpoint{.01\paperwidth}{-80pt},left,top]{\pgfuseimage{icsi-logo}}
+  \pgftext[at=\pgfpoint{.95\paperwidth}{-84pt},right,top]{\pgfuseimage{ncsa-logo}}
+}{}
+
+\setbeamerfont{title}{series=\bfseries,size=\Large,fg=red}
+\setbeamercolor{title}{fg=bro-red}
+
+%
+% Regular page
+%
+
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamercolor{frametitle}{fg=black}
+\addtobeamertemplate{frametitle}{%
+  % FIXME. Hackish way to use Palatino font in frame title.
+  \renewcommand*\sfdefault{ppl}\normalfont\upshape}{}
+%\addtobeamertemplate{frametitle}{\vspace{12pt}}{\vspace{8pt}\hrule}
+
+\mode<presentation>
+
+\mode<all>
+

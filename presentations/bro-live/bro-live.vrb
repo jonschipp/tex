@@ -1,0 +1,24 @@
+\frametitle{Motivations}
+\begin{block}{Issues}
+    \begin{itemize}
+      \item \textcolor{red}{Users:} Too much time is spent passing around, downloading, and copying Virtual Machines or other materials
+     \begin{itemize}
+\item Networks are slow
+\item Virtual harddisks are big
+     \end{itemize}
+      \item \textcolor{red}{Users:} Technical difficulties can occur and often do that end up putting some behind the group
+     \begin{itemize}
+       \item VirtualBox bus configuration
+       \item VirtualBox network configuration
+     \end{itemize}
+      \item \textcolor{red}{Admins:} Account management is repetitive
+      \item \textcolor{red}{Everyone:} Changes are not easy
+     \begin{itemize}
+       \item Insertion of wrong exercises, mistakes, etc.. How is this handled?
+     \end{itemize}
+    \end{itemize}
+  \end{block}
+ \begin{center}
+    \item[$\Rightarrow$]
+      \alert{Ultimately, the burden is placed on the users and this affects the overall event experience}
+  \end{center}

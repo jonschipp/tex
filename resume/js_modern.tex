@@ -1,0 +1,273 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Two Column Curriculum Vitae XeLaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Alessandro (The CV Inn)
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{article} % Font size (10pt, 11pt or 12pt)
+
+\usepackage[hmargin=1.25cm, vmargin=1.5cm]{geometry} % Document margins
+
+\usepackage{marvosym} % Required for symbols in the colored box
+\usepackage{ifsym} % Required for symbols in the colored box
+
+\usepackage[usenames,dvipsnames]{xcolor} % Allows the definition of hex colors
+
+% Fonts and tweaks for XeLaTeX
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{Hoefler Text} % Main document font
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans} % Font for your name at the top
+%\setmonofont[Scale=MatchLowercase]{Andale Mono}
+
+% Colors for links, text and headings
+\usepackage{hyperref}
+\definecolor{linkcolor}{HTML}{506266} % Blue-gray color for links
+\definecolor{shade}{HTML}{F5DD9D} % Peach color for the contact information box
+\definecolor{text1}{HTML}{2b2b2b} % Main document font color, off-black
+\definecolor{headings}{HTML}{701112} % Dark red color for headings
+% Other color palettes: shade=B9D7D9 and linkcolor=A40000; shade=D4D7FE and linkcolor=FF0080
+
+\hypersetup{colorlinks,breaklinks, urlcolor=linkcolor, linkcolor=linkcolor} % Set up links and colors
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+% Headers and footers can be added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
+% Example footer:
+%\rfoot{\color{headings} {\sffamily Last update: \today}. Typeset with Xe\LaTeX}
+
+\renewcommand{\headrulewidth}{0pt} % Get rid of the default rule in the header
+
+\usepackage{titlesec} % Allows creating custom \section's
+
+% Format of the section titles
+\titleformat{\section}{\color{headings}
+\scshape\Large\raggedright}{}{0em}{}[\color{black}\titlerule]
+
+\titlespacing{\section}{0pt}{0pt}{7pt} % Spacing around titles
+
+\begin{document}
+
+\color{text1} % Sets the default text color for the whole document
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\par{\centering{\sffamily\Huge Jonathan Schipp}\\ % Your name
+{\color{headings}\fontspec[Variant = 2]{Zapfino} Curriculum {Vit\fontspec[Variant = 3]{Zapfino}\ae}\\[15pt]\par}
+	
+%----------------------------------------------------------------------------------------
+
+% Start the left-hand side of the page
+\begin{minipage}[t]{0.5\textwidth}
+\vspace{0pt} % Trick for alignment
+	
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience} 
+
+%----------------------------------------------------------------------------------------
+% WORK EXPERIENCE -1-
+%----------------------------------------------------------------------------------------
+
+{\raggedleft\textsc{Current, from June 2011}\par}
+
+{\raggedright\large Touch of Class, Parke-Bell LTD, Inc.\\
+\textit{Unix System Administrator and Security Specialist}\\[5pt]}
+
+\begin{itemize}
+\item Manage and configure computer networks and computer network systems for four locations
+\item Design, implement, and automate solutions to increase business productivity
+\item Maintain telephony software and hardware for a call center utilizing VoIP technologies
+\item Monitor networks for problems, intrusions, and other anomalous activities
+\item Coordinate the storage of events and logs, and ensure the integrity of system records
+\item Pursue compliance with PCI's Data Security Standard and follow common industry practices in effort to protect company assets
+\item Perform and review vulnerability assessments and internal pentetration tests
+\item Policy writing and technical documentation of system modifications, configurations, and tasks
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+% WORK EXPERIENCE -2-
+%----------------------------------------------------------------------------------------
+
+{\raggedleft\textsc{March 2011 -- June 2011}\par}
+
+{\raggedright\large Mitchell International\\
+\textit{Technical Support Specialist}\\[5pt]}
+
+\begin{itemize}
+\item Aid customers in resolving software issues by phone and with remote assistance
+\item Troubleshoot and configure different software in various network environments
+\item Communicate, coordinate, and diagnose problems with team members
+\item Document dialogues, procedures, and solutions with and for the customer
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education} 
+
+\begin{tabular}{rl} % Start a table with two columns, one for dates and one for qualifications
+
+2007 -- \textsc{2011} & \textbf{Bachelor of Applied Science} \\ 
+& \textsc{Computer Network Systems and }\\
+& \textsc{Information Security} \\ 
+& \textit{ITT Technical Institute, Newburg, IN}\\
+\end{tabular}\\[3pt]
+
+%----------------------------------------------------------------------------------------
+\end{minipage} % End left-hand side of the page
+\hfill
+% Start the right-hand side of the page
+\begin{minipage}[t]{0.44\textwidth} 
+\vspace{0pt} %trick for alignment
+
+%----------------------------------------------------------------------------------------
+%	COLORED BOX
+%----------------------------------------------------------------------------------------
+
+\colorbox{shade}{\textcolor{text1}{
+\begin{tabular}{c|p{7cm}}
+\raisebox{-4pt}{\textifsymbol{18}} & 606 S. Foxtrot Ct, Huntingburg, IN 12345 \\ % Address
+\raisebox{-3pt}{\Mobilefone} & (812) 309-1989 \\ % Phone number
+\raisebox{-1pt}{\Letter} & \href{mailto:jonschipp@gmail.com}{jonschipp@gmail.com} \\ % Email address
+\Keyboard & \href{http://jonschipp.com}{http://jonschipp.com} \\ % Website
+\Keyboard & \href{http://sickbits.net}{http://sickbits.net} \\ % Website
+\Keyboard & \href{http://dclinux.org}{http://dclinux.org} \\ % Website
+\end{tabular}
+}
+}\\[5pt]
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+
+\section {Certifications}
+\begin{tabular}{rl}
+COMPTIA &  A+, Network+, Linux+, Security+ 
+\end{tabular}\\[-5pt]
+\\
+\begin{tabular}{rl}
+Wireshark Certified Network Analyst
+\end{tabular}\\[-5pt]
+%----------------------------------------------------------------------------------------
+%	TRAINING
+%----------------------------------------------------------------------------------------
+
+\section{Training}
+\begin{itemize}
+\item Over 300 hours of specialized information security and technology based workshops and conferences
+\item Attended the HFC Metasploit Framework workshop in Cincinnati and in Louisville.
+\item iOS Development Course -– \textit{Vincinnes University, Jasper Campus}
+\item SecurityTube.net's Wireless LAN Security and Penetration Testing Megaprimer
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+
+\section{Honors \& Awards} 
+
+\begin{tabular}{rl}
+2010	 & \textbf{Capture the Flag - Black Badge recipient}\\
+& Hack3rcon, \textsc{Charleston, WV}\\ \\
+
+%----------------------------------------------------------------------------------------
+
+2011	 & \textbf{Employee of the Month}\\
+& Touch of Class
+\end{tabular}\\[0pt]
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Presentation Experience} 
+
+\begin{tabular}{rl}
+\textsc{Conferences}
+& "A PCAP Workshop" 2012 \\
+& \textit{Hack3rcon} 3 \\
+& "An Introduction to Traffic Analysis" 2012 \\
+& \textit{AIDE Conference, Marshall University} \\
+& "FOSS for Unix Administrators" 2011 \\
+& \textit{Vincennes University, Jasper Campus} \\
+& "Implementing a NMS" 2011 \\
+& \textit{Hack3rcon 2} \\
+& "Hacker Hotshots" Interview 2013 \\
+& \textit{ConciseCourses.com} \\
+\end{tabular} \\
+
+%----------------------------------------------------------------------------------------
+%	COMMUNITY CONTRIBUTIONS
+%----------------------------------------------------------------------------------------
+
+\section{Community Contributions} 
+
+\begin{tabular}{rl}
+\textsc{Contributer}
+& NetSniff-NG - High Performance Toolkit \\
+& Downtown Wifi, City of Huntingburg\\
+\textsc{Founder}
+& Dubois County Linux User Group\\ 
+& Southern Indiana Computer Klub \\
+\textsc{Author}
+& 40+  field related articles \\
+\end{tabular}
+	
+\end{minipage} % End right-hand side of the page
+
+%\newpage
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+%\par{\centering{\sffamily\Huge Jonathan Schipp}\\ % Your name
+%{\color{headings}\fontspec[Variant = 2]{Zapfino} Curriculum {Vit\fontspec[Variant = 3]{Zapfino}\ae}\\[15pt]\par}
+	
+% Start the left-hand side of the page
+%\begin{minipage}[t]{0.5\textwidth}
+%\vspace{0pt} % Trick for alignment
+	
+%----------------------------------------------------------------------------------------
+% SKILLS
+%----------------------------------------------------------------------------------------
+
+%\section{Skills} 
+
+%\begin{itemize}
+%\item Working knowledge of FreeBSD, OpenBSD, OSX, Linux, Windows, Cisco IOS, and iOS
+%\item Understanding and experience with firewall and packet filtering software such as iptables, PF, IPFW, OSX ALF, Sonicwall, Windows Advanced Firewall, Windows 2000 IP Security Policies
+%\item Detailed knowledge of the TCP/IPv4 packet structure and network traffic
+%\item Experienced in network and host based intrusion detection systems including signature and behavioral based detection engines such as Snort, BRO-IDS, OSSEC, and Sonicwall
+%\item Proficient with packet capture and network traffic analysis tools like Tcpdump, Wireshark, ARGUS, iftop, Ntop, passivedns, httpry, arpwatch, TCPick, TCPFlow, Netsniff-ng etc.
+%\item Experience in the automation of administrative tasks on unix-like systems with shell programming. Very comfortable with command-line interfaces, preferred actually
+%\item Working knowledge of Metasploit, Nessus, Nmap, hping3 and other popular open source security testing software and utilities
+
+%\end{itemize}
+
+%\end{minipage}
+
+\end{document}  

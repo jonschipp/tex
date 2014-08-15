@@ -1,0 +1,19 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{KMV{\etalchar{+}}09}
+
+\bibitem[SP10]{Rosen}
+Rami Rosen
+\newblock {Resource management: Linux kernel Namespaces and cgroups}.
+\newblock In {\em http://www.haifux.org/lectures/299/netLec7.pdf}
+
+\bibitem[KMV{\etalchar{+}}14]{Rosen}
+Rami Rosen
+\newblock {Linux Containers and the Future Cloud}.
+\newblock In {\em http://www.haifux.org/lectures/320/netLec8\_final.pdf}
+
+\bibitem[KMV{\etalchar{+}}14]{Petazonni}
+Jerome Petazzoni
+\newblock {Lightweight Virtualization with Linux Containers (LXC)}.
+\newblock In {\em http://www.ciecloud.org/2013/subject/07-track06-Jerome%20Petazzoni.pdf} The 5th China Cloud Computing Conference, China National Convention Center, Beijing
+
+\end{thebibliography}
