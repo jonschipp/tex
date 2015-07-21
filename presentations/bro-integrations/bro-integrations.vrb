@@ -1,0 +1,12 @@
+\frametitle{}
+\begin{block}{Agenda}
+    \begin{itemize}
+      \item Outlining a few things I've work on
+     \begin{itemize}
+       \item ISLET - Software that can be used for Bro training
+       \item Mal-dnssearch - Create Bro intel feeds from command-line
+       \item Sagan - Log analysis on Bro logs
+       \item Nagios - A plug-in to monitor your Bro cluster
+     \end{itemize}
+    \end{itemize}
+  \end{block}

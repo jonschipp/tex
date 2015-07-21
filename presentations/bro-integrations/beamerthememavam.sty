@@ -1,0 +1,110 @@
+\ProvidesPackage{beamerthememavam}[2011/05/27 v0.01 LaTeX beamer theme from Matthias]
+
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\usepackage{upquote} % Use nice verbatim quotes.
+
+\hypersetup{
+    breaklinks=true,        % break URLs at the end of line
+    colorlinks=true,        % false: boxed links; true: colored links
+    linkcolor=blue,         % color of internal links
+    citecolor=blue,         % color of links to bibliography
+    filecolor=blue,         % color of file links
+    urlcolor=black           % color of external links
+}
+
+% My colors
+\definecolor{deep-red}{HTML}{C24444}
+\colorlet{deep-green}{green!60!black}
+
+\lstset{
+  tabsize=2,
+  basicstyle=\footnotesize\ttfamily,
+  columns=flexible,
+  extendedchars=true,
+  breaklines=true,
+  prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+  showtabs=false,
+  showspaces=false,
+  showstringspaces=false,
+  keywordstyle={\color[rgb]{0,0,1}},
+  commentstyle={\color[rgb]{0.133,0.545,0.133}},
+  stringstyle={\color[rgb]{0.627,0.126,0.941}}
+}
+
+\lstdefinelanguage{bro}{
+  morecomment=[l]{\#},
+  morekeywords={add,event,type,global,local,in,
+  count,addr,port,string,time,interval,set,table,record,
+  create_expire,read_expire, write_expire,
+  module,export,NOTICE}
+}
+
+\mode<presentation>
+
+\setbeamersize{text margin left=1em,text margin right=1em}
+
+\usecolortheme{rose}
+\usefonttheme[onlymath]{serif}
+\setbeamertemplate{frametitle}[default][center]
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[ball]
+
+\def\blockcolor{WhiteSmoke}
+\setbeamercolor{block body}{bg=\blockcolor} 
+\setbeamercolor{block body example}{bg=\blockcolor} 
+\setbeamercolor{block body alerted}{bg=\blockcolor} 
+\setbeamertemplate{blocks}[rounded][shadow=true] 
+
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]
+    {author in head/foot}%
+%    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]
+    {title in head/foot}%
+%    \usebeamerfont{section in head/foot}\insertsection
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]
+    {date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+%\setbeamerfont{title}{size=\Large,parent=structure,shape=\upshape}
+%\setbeamerfont{subtitle}{size=\normalsize,parent=title}
+
+%\definecolor{craneorange}{RGB}{252,187,6}
+%\definecolor{craneblue}{RGB}{4,6,76}
+
+%\setbeamercolor{structure}{fg=craneblue}
+
+%\setbeamercolor{palette primary}{fg=craneblue,bg=craneorange!70}
+%\setbeamercolor{palette secondary}{fg=craneblue,bg=craneorange!80}
+%\setbeamercolor{palette tertiary}{fg=craneblue,bg=craneorange!90}
+%\setbeamercolor{palette quaternary}{fg=craneblue,bg=craneorange}
+
+%\setbeamercolor{titlelike}{parent=palette quaternary}
+
+%\setbeamercolor{block title}{fg=craneblue,bg=craneorange}
+%\setbeamercolor{block title alerted}{use=alerted text,fg=craneblue,bg=alerted text.fg!75!bg}
+%\setbeamercolor{block title example}{use=example text,fg=craneblue,bg=example text.fg!75!bg}
+%
+%\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!25!bg}
+%\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!25!bg}
+%\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!25!bg}
+%
+%\setbeamercolor*{separation line}{}
+%\setbeamercolor*{fine separation line}{}
+
+\mode
+<all>
+
