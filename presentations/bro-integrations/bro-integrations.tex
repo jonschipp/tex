@@ -229,16 +229,14 @@ MIT, Cambridge, Massachusetts
       \alert{alert tcp \$EXTERNAL\_NET any -> \$HOME\_NET \$HTTP\_PORT (msg: "[BRO] Possible
       Proxy via CONNECT"; content: " CONNECT "; content: "ROXY-CONNECTION";
       parse\_src\_ip: 1; parse\_dst\_ip: 2; flowbits: set, bro\_possible\_proxy\_connect, 60;
-      flowbits: noalert; threshold: type limit, track by\_src, count 1, seconds 86400;
-      classtype: suspicious-traffic; sid: 11000002; rev:1;)}
+      flowbits: noalert; classtype: suspicious-traffic; sid: 11000002; rev:1;)}
     \end{exampleblock}
    \item Alert if we see a transfer from files.log after
     \begin{exampleblock}{Proxy detection validation}
       \alert{alert tcp \$EXTERNAL\_NET any -> \$HOME\_NET \$HTTP\_PORT (msg: "[BRO] Proxy
         Detected via CONNECT"; content: "SHA"; content:!"0.00"; pcre:
         "/SSL|HTTP|FTP/"; parse\_src\_ip: 2; parse\_dst\_ip: 1; flowbits:
-        isset,by\_src,bro\_possible\_proxy\_connect; threshold: type limit, track
-        by\_src, count 1, seconds 86400; classtype: suspicious-traffic; sid: 11000004; rev:1;)}
+        isset,by\_src,bro\_possible\_proxy\_connect; classtype: suspicious-traffic; sid: 11000004; rev:1;)}
     \end{exampleblock}
   \end{itemize}
 \end{frame}
@@ -252,7 +250,6 @@ MIT, Cambridge, Massachusetts
         Proxy via GET or POST"; pcre: "/ GET | POST /"; content: "ROXY-CONNECTION";
         pcre: "/http|https|ftp:\/\//"; parse\_src\_ip: 1; parse\_dst\_ip: 2;
         flowbits: set, bro\_possible\_proxy\_get, 60; flowbits: noalert;
-        threshold: type limit, track by\_src, count 1, seconds 86400;
         classtype: suspicious-traffic; sid: 11000001; rev:1;)}
     \end{exampleblock}
    \item Alert if we see a transfer from files.log after
@@ -260,8 +257,7 @@ MIT, Cambridge, Massachusetts
       \alert{alert tcp \$EXTERNAL\_NET any -> \$HOME\_NET \$HTTP\_PORT (msg: "[BRO] Proxy
         Detected via GET or POST"; content: "SHA"; content:!"0.00"; pcre: "/SSL|HTTP|FTP/";
         parse\_src\_ip: 2; parse\_dst\_ip: 1; flowbits:
-        isset,by\_src,bro\_possible\_proxy\_get; threshold: type limit, track by\_src, count 1, seconds 86400;
-        classtype: suspicious-traffic; sid: 11000003; rev:1;)}
+        isset,by\_src,bro\_possible\_proxy\_get; classtype: suspicious-traffic; sid: 11000003; rev:1;)}
     \end{exampleblock}
   \end{itemize}
 \end{frame}
@@ -328,9 +324,12 @@ MIT, Cambridge, Massachusetts
     \begin{itemize}
       \item Support PF\_RING and netmap stats
       \item Use API when broctld is out
-      \item Check for communication errors
+      \item Check for communication and other noteworthy errors
     \end{itemize}
   \end{block}
+    \begin{exampleblock}{Retrieve}
+      \alert{\$ git clone https://github.com/jonschipp/nagios-plugins}
+    \end{exampleblock}
 \end{frame}
 
 \begin{frame}{Feedback/Questions}
