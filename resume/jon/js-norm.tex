@@ -1,0 +1,419 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Jon Schipp}}
+
+\ (812) 309-1989 \ \textbullet \ \ jonschipp@gmail.com \ \textbullet \ \ Champaign, IL
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Primary Experience}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+	{\textbf{National Center for Supercomputing Applications}}
+	{\textbf{Urbana, IL}}
+
+	\headerrow
+		{\emph{Security Engineer, CyberSecurity Directorate}}
+		{\emph{July 2013 -- Present}}
+	\begin{itemize*}
+		\item Team is responsible for defending one of the world's fastest supercomputers, Blue Waters
+		\item Implement and configure security controls and solutions in a security conscious R\&D environment
+		\item Administration of two large Bro clusters, Collective Intelligence Framework integration.
+		\item Development operations using ESX, Puppet, Ansible, Vagrant, and Git
+		\item Instituted a multi-tier logging infrastructure (relays, analyzers, and collectors) for thousands of nodes.
+		\item Large Nagios deployment with Thruk, MySQL, IRC interaction, NRPE proxies, and custom plug-ins
+		\item Red Hat and CentOS Linux server administration
+		\item Intrusion detection, network flow analysis, and incident response
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Touch of Class, Parke-Bell LTD, Inc.}}
+		{\textbf{Huntingburg, IN}}
+	\\
+	\headerrow
+		{\emph{Unix System Administrator and Security Specialist}}
+		{\emph{June 2011 -- July 2013}}
+	\begin{itemize*}
+		\item Manage and configure computer networks and computer network systems for four locations
+		\item Design, implement, and automate solutions to increase business productivity
+		\item Maintain telephony software and hardware for a call center utilizing VoIP technologies
+		\item Monitor networks for problems, intrusions, incidents, and other anomalous activities
+		\item Coordinate the storage of events and logs, and ensure the integrity of system records
+		\item Pursue compliance with PCI's Data Security Standard and follow common industry practices in an effort to protect company assets
+		\item Perform and review vulnerability assessments and internal penetration tests
+		\item Policy writing and technical documentation of modifications, configurations, and tasks
+	\end{itemize*}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Secondary Experience}
+
+\begin{itemize}
+
+	\item
+	\headerrow
+	{\textbf{Draconyx, LLC.}}
+	{\textbf{Evansville, IN}}
+	\headerrow
+		{\emph{President}}
+		{\emph{July 2015 -- Present}}
+	\begin{itemize*}
+		\item Provide network security and training services to organizations
+	\end{itemize*}
+
+\item
+	\headerrow
+		{\textbf{Touch of Class, Parke-Bell LTD, Inc.}}
+		{\textbf{Huntingburg, IN}}
+	\\
+	\headerrow
+		{\emph{Consultant}}
+		{\emph{August 2013 -- Present}}
+	\begin{itemize*}
+		\item Train staff in network security monitoring practices and tools
+		\item Git training and orchestration, Github.com workflow for project management
+		\item Administer a SecurityOnion machine monitoring 7 links, write Snort rules and Bro scripts
+		\item Nagios, Munin, Multi-Router Traffic Grapher, and NFSen deployment for network monitoring
+		\item Network administration, OSX and Linux server support
+	\end{itemize*}
+\end{itemize}
+
+\begin{itemize}
+\item
+	\headerrow
+		{\textbf{Syncurity Networks, LLC.}}
+		{\textbf{Rochester, NY}}
+	\\
+	\headerrow
+		{\emph{Contractor}}
+		{\emph{December 2013 -- April 2014}}
+	\begin{itemize*}
+		\item Nagios and Munin deployment for a large number of network security monitoring sensors
+	\end{itemize*}
+\end{itemize}
+
+\begin{itemize}
+\item
+	\headerrow
+		{\textbf{Kitchen Jewels, LLC.}}
+		{\textbf{Jasper, IN}}
+	\\
+	\headerrow
+		{\emph{Consultant}}
+		{\emph{April 2014 -- Present}}
+	\begin{itemize*}
+		\item VMware ESX, KVM, Nagios, Syslog, security controls, LastPass and backup solutions
+		\item SecurityOnion and managed network security monitoring
+	\end{itemize*}
+\end{itemize}
+
+\begin{itemize}
+\item
+	\headerrow
+		{\textbf{Critical Stack, LLC.}}
+		{\textbf{Cincinnatti, OH}}
+	\\
+	\headerrow
+		{\emph{Contractor}}
+		{\emph{September 2014 -- Present}}
+\end{itemize}
+
+\begin{itemize}
+\item
+	\headerrow
+		{\textbf{Nexus Engineering, LLC.}}
+		{\textbf{Evansville, IN}}
+	\\
+	\headerrow
+		{\emph{Contractor}}
+		{\emph{January 2015 -- Present}}
+	\begin{itemize*}
+		\item Log analysis and active response with OSSEC and Sagan
+	\end{itemize*}
+\end{itemize}
+
+\hrule
+
+\newpage
+
+\hrule
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{ITT Technical Institute}}
+		{\textbf{Newburgh, IN}}
+	\\
+	\headerrow
+		{\emph{Computer Network Systems and Information Security, B.S. Applied Science}}
+		{\emph{Sept 2007 -- June 2011}}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+
+\subsection*{Selected Additional Training \& Education}
+
+\begin{itemize}
+	\parskip=0.1em
+	\item Over 1000 hours of specialized information security and technology based workshops and conferences
+	\item Attended the HFC Metasploit Framework workshop in Cincinnati and Louisville
+	\item iOS Development Course, \textit{Vincinnes University}
+	\item CourseEra - Learn to Program: The Fundametals (Python), \textit{University of Toronto}
+	\item National Science Foundation's 2013 Bro Workshop
+	\item International Supercomputing Conference's Ensuring Network Performance with perfSONAR tutorial
+	\item Information Systems Security Association's Password Exploitation Workshop, \textit{Louisville}
+	\item SecurityTube.net's Wireless LAN Security and Penetration Testing Megaprimer
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Certifications}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item \textsc{COMPTIA A+}
+	\item \textsc{COMPTIA Network+}
+	\item \textsc{COMPTIA Linux+}
+	\item \textsc{COMPTIA Security+}
+	\item \textsc{Wireshark Certified Network Analyst (WCNA)}
+	\item \textsc{GIAC Certified Intrusion Analyst (GCIA)}
+	\item \textsc{GIAC Reverse Engineering Malware (GREM)}
+	\item \textsc{Linux Professional Institute Certification Level-1 (LPIC-1)}
+	\item \textsc{Linux Foundation Certified System Administrator (LFCS)}
+	\item \textsc{Berkeley Software Distribution Associate (BSD-A)}
+	\item \textsc{ARRL Technician Class License}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Projects}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{Bro Network Security Monitor}}
+		{\textbf{ICSI, NCSA}}
+	\\
+	\headerrow
+		{\emph{Developer, operations, \& training for the Bro Network Security Platform}}
+		{\emph{2014 -- Present}}
+
+	\item
+	\headerrow
+		{\textbf{ISLET: Isolated, Scalable, \& Lightweight Environment for Training}}
+		{\textbf{NCSA}}
+	\\
+	\headerrow
+		{\emph{Developed a Linux-based software training platform built around containers}}
+		{\emph{2014 -- Present}}
+
+	\item
+	\headerrow
+		{\textbf{SDAIA ScienceDMZ Intelligence Sharing System}}
+		{\textbf{NCSA, XSEDE}}
+	\\
+	\headerrow
+		{\emph{Developer for Docker based honey pot system}}
+		{\emph{2015 -- Present}}
+
+	\item
+	\headerrow
+		{\textbf{Virtual Machine Infrastructure}}
+		{\textbf{UIUC GLUG \& OpenNSM}}
+	\\
+	\headerrow
+		{\emph{Build Linux \& NSM virtual machines with Xen Project hosts and KVM based Ganeti cluster}}
+		{\emph{2014 -- 2015}}
+
+	\item
+	\headerrow
+		{\textbf{Open Network Security Monitoring Group (OpenNSM)}}
+		{\textbf{ACM}}
+	\\
+	\headerrow
+		{\emph{Organized \& led a weekly network security monitoring forum with international participation}}
+		{\emph{2014 -- Present}}
+
+\end{itemize}
+
+
+
+%\newpage
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Television Appearances}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{ITT Technical Institute}}
+		{\textbf{Louisville, KY}}
+	\\
+	\headerrow
+		{International Commercial}
+		{\emph{ITT, La Fabrica Films, MGSCOMM}}
+		{Film date - \emph{February 2014}}
+		\hspace{280pt}{Air date - \emph{March 2014}}
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Selected Presentations}
+
+\begin{itemize}
+	\item \textsc{2014} "ISLET: Improving Linux-based Software Training" \textit{Information Trust Institute, University of Illinois}
+	\item \textsc{2013} "Intrusion Detection and Network Analysis" \textit{ITT-Tech, Newburgh, IN}
+	\item \textsc{2013} "The Netsniff-NG Toolkit" \textit{Derbycon}
+	\item \textsc{2013} "A Look at the Netsniff-NG Toolkit" \textit{Midwest Open Source Software Conference, University of Louisville}
+	\item \textsc{2013} "Hacker Hotshots" Interviewed by \textit{ConsciseCourses.com}
+	\item \textsc{2012} "A PCAP Workshop" \textit{Hack3rcon 3}
+	\item \textsc{2012} "An Introduction to Traffic Analysis" \textit{AIDE Conference, Marshall University}
+	\item \textsc{2011} "FOSS for Unix Administrators" \textit{Vincennes University}
+	\item \textsc{2011} "Implementing a Network Monitoring System" \textit{Hack3rcon 2}
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Publications}
+\begin{itemize}
+	\parskip=0.1em
+        \item \textsc{2015} Schipp, J., Dalziel, H., "Deploying Secure Containers for Training and Development ",
+        \textit{Syngress, ISBN 9780128047170}
+        \item \textsc{2015} Schipp, J., Dopheide, J., and Slagell, A., "ISLET: An Isolated, Scalable
+        \& Lightweight Environment for Training", \textit{in the proceedings of
+        XSEDE}, St. Louis, MO, Jul., 15.
+	\item \textsc{2015} "Linux Containers for Event Training" \textit{2600:
+          The Hacker Quarterly, Volume 32.1}
+	\item \textsc{2014} "Intelligence Data and Bro" \textit{Bro Blog, bro.org}
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Honors \& Awards}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item \textsc{2016} NCSA - HIGH5 for Logging Infrastructure
+	\item \textsc{2015} NCSA - HIGH5 for ISLET Award
+	\item \textsc{2015} NCSA - Technical Excellence Award
+	\item \textsc{2011} Touch of Class - Employee of the Month
+	\item \textsc{2010} Hack3rcon - Capture the Flag winner – Black Badge recipient
+	\item \textsc{2009} ITT Tech - Academic Honors
+	\item \textsc{2007} ITT Tech - Academic Honors
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Community Contributions}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item \textsc{Founder} -- Open Network Security Monitoring Group – \textit{NSM discussion group}
+	\item \textsc{Founder} -- Dubois County Linux User Group – \textit{Operating system discussion group}
+	\item \textsc{Founder} -- Southern Indiana Computer Klub – \textit{Security research group}
+	\item \textsc{Contributor} -- Bro \textit{the Bro network security monitor}
+	\item \textsc{Contributor} -- Netsniff-NG Toolkit \textit{Suite of high performance networking tools}
+	\item \textsc{Contributor} -- SecurityOnion \textit{The NSM Linux Distribution}
+	\item \textsc{Implementor} -- Free downtown Wifi, \textit{City of Huntingburg}
+	\item \textsc{Author} -- HC3 presentation material used at Princess Sumaya University for Technology (PSUT)
+	\item \textsc{Author} -- 50+ online articles covering network security monitoring and system administration
+	\item \textsc{Author} -- mal-dnssearch, a malware host detection and prevention script that handles multiple logs
+	\item \textsc{Author} -- Many other useful system admin scripts such as pps, gencfg, and malcachesnoop
+	\item \textsc{Member} -- USENIX, ACM, REN-ISAC, ISSA Kentuckiana, Infragard, and Appalachian Institute of Digital Evidence
+
+\end{itemize}
+
+\newpage
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Skills}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item Working knowledge of FreeBSD, OpenBSD, OSX, AIX, GNU/Linux (Fedora \& Debian families), Windows
+	\item Understanding and experience with firewall and packet filtering software such as iptables, PF, IPFW, OSX ALF, Sonicwall, Windows Advanced Firewall, Windows 2000 IP Security Policies
+	\item Detailed knowledge of the TCP/IPv4 packet structure and network traffic
+	\item Experienced in network and host based intrusion detection systems
+including signature and behavioral based detection engines such as Snort, Suricata, Bro, OSSEC, and Sonicwall
+	\item Proficient with packet capture and network traffic analysis tools like Tcpdump, Wireshark, Bro, Snort, ARGUS, iftop, Ntop, passivedns, httpry, arpwatch, TCPick, TCPFlow, Netsniff-ng etc.
+	\item Experience in the automation of administrative tasks on unix-like
+systems with Bash and Korn shell programming. Some additional experience with Git, Awk, Python, C, \LaTeX, Tcl/Expect, Make, HTML, and reStructuredText. Very comfortable with command-line interfaces.
+	\item Working knowledge of Metasploit, Nessus, Nmap, hping3, John the Ripper, Hashcat, Aircrack-ng and other popular open source security testing software and utilities
+\end{itemize}
+
+\let\thefootnote\relax\footnote{See http://jonschipp.com for further
+information and for verification of all claims made above (includes sources and references)}
+\let\thefootnote\relax\footnote{See http://github.com/jonschipp for code and open source contributions}
+
+\end{document}
