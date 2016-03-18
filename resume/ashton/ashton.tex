@@ -1,0 +1,160 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Ashton Falk}}
+
+\ (217) 520-4203 \ \textbullet \ \ acfalk6@gmail.com \ \textbullet \ \ Bloomington, IL
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Work History}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{NTT Data}}
+		{\textbf{Bloomington, IL}}
+	\\
+	\headerrow
+		{\emph{Communcations Specialist}}
+		{\emph{March 2015 -- Present}}
+        Consult on various IT projects within State Farm corporate headquarters to develop strategic communication and
+        organizational change strategies. Copy edit and proofread internal/external communications and other public
+        relations materials in collaboration with Public Affairs. Assist with the development of multiple project 
+        communications and cross-project coordination activities. Coordinate communications across multiple software
+        releases and programs. As time permits, coordinate other work assignments (within the program) as assigned by
+        Program or Project Managers.
+	\begin{itemize*}
+	  \item Communication Strategy Development
+	  \item Organizational Change Strategy Development
+	  \item Stakeholder Identification
+          \item Audience Analysis
+          \item Tactical Plan Development
+          \item Execute Strategic Communication Planned Activities (email, powerpoint, video, job aids, etc)
+          \item Leadership Message Points
+          \item Newsletter Content Development
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Lee Enterprises}}
+		{\textbf{Decatur, IL}}
+	\\
+	\headerrow
+		{\emph{Classified Advertising Representative}}
+		{\emph{September 2013 -- March 2015}}
+        Responsible for building and maintaining client relationships and creating recruitment marketing campaigns
+	\begin{itemize*}
+          \item Managed approximately 200 client accounts
+          \item Created and designed advertisements, from employment to business promotion
+          \item Created and analyzed digital recruitment advertising through various social media platforms
+          \item Worked with daily deadlines to manage and organize accounts within a fast-paced environment
+	\end{itemize*}
+	  {\emph{Herald \& Review Volunteer Committee Head}} \\
+         Responsible for the coordination and development of office public relations
+	\begin{itemize*}
+         \item Organized meetings and managed the committee, leading group discussions and votes
+         \item Coordinated office events to promote positive public relations within the office and community
+         \item Managed marketing strategies by organizing charity fundraisers, ordering promotional items and facilitating print/online news stories
+	\end{itemize*}
+
+        \item
+	\headerrow
+		{\textbf{University of Illinois Foundation}}
+		{\textbf{Champaign, IL}}
+	\\
+	\headerrow
+		{\emph{Telemarketing Services Office Assistant}}
+		{\emph{January 2012 -- August 2013}}
+          Responsible for reaching out to alumni for fundraising and account management
+	\begin{itemize*}
+          \item Raised approximately \$10,000 in funds benefiting the current students
+          \item Communicated with alumni and friends of the university to update them on the progress of the school
+          \item Recruited and trained new employees 
+	\end{itemize*}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{Prosci}}
+		{\textbf{Bloomington, IL}}
+	\\
+	\headerrow
+		{\emph{ADKAR Change Management Certification}}
+		{\emph{August 2015}}
+
+	\item
+	\headerrow
+		{\textbf{University of Illinois-Urbana/Champaign}}
+		{\textbf{Champaign, IL}}
+	\\
+	\headerrow
+		{\emph{Bachelor of Science in Psychology and Communication}}
+		{\emph{August 2009 -- May 2013}}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Skills}
+
+\begin{itemize}
+	\item Social media experience with Twitter, Facebook, Tumblr and LinkedIn
+        \item Software experience with Lotus Notes, Microsoft Sharepoint, Microsoft Office Standard Suite, Microsoft
+        Visio and Microsoft OneNote
+\end{itemize}
+
+\end{document}
